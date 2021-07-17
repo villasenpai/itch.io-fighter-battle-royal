@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
-  m_Name: WarriorV1.3
+  m_Name: OldGuardian
   m_EditorClassIdentifier: 
-  fighterHealth: 35
-  fighterDamage: 3
-  fighterAttackInterval: 3
-  fighterSpecialAttackInterval: 9
-  fighterMoveSpeed: 200
+  fighterHealth: 50
+  fighterDamage: 6
+  fighterAttackInterval: 6
+  fighterSpecialAttackInterval: 18
+  fighterMoveSpeed: 120

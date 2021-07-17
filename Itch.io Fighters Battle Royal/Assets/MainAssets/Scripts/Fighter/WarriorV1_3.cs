@@ -88,7 +88,6 @@ public class WarriorV1_3 : MonoBehaviour, IFighterAttack
 
     public void SpecialAttack()
     {
-            GetComponent<IFighterRun>().Stop();
             Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[1], fighterMask);
             foreach (Collider2D hit in hits)
             {

@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 
-public class EvilWizard2 : MonoBehaviour, IFighterAttack
+public class OldGuardian : MonoBehaviour, IFighterAttack
 {
     [Header("Attack State")]
     [SerializeField] LayerMask fighterMask;
     [SerializeField] CircleCollider2D[] attackPoints;
+    [SerializeField] GameObject bombPrefab;
     float attackInterval;
     float specialAttackInterval;
     int damage;
@@ -89,14 +90,11 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
 
     public void SpecialAttack()
     {
-        Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[1], fighterMask);
-        foreach (Collider2D hit in hits)
-        {
-            if (hit == null)
-                continue;
-
-            hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
-        }
+        GameObject bomb = Instantiate(bombPrefab, attackPoints[1].gameObject.transform.position, attackPoints[1].gameObject.transform.rotation);
+        IBullet bombBullet = bomb.GetComponent<IBullet>();
+        bombBullet.bulletCollision = attackPoints[0];
+        bombBullet.bulletDamage = fighterDamage;
+        bombBullet.fighterMask = fighterMask;
     }
 }
 

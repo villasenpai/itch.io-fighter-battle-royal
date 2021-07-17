@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
   m_Name: EvilWizard2
   m_EditorClassIdentifier: 
-  fighterHealth: 15
+  fighterHealth: 30
   fighterDamage: 4
-  fighterAttackInterval: 6
-  fighterSpecialAttackInterval: 13
-  fighterMoveSpeed: 130
+  fighterAttackInterval: 3
+  fighterSpecialAttackInterval: 9
+  fighterMoveSpeed: 200

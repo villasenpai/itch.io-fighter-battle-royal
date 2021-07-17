@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
   m_Name: Minotaur
   m_EditorClassIdentifier: 
-  fighterHealth: 15
-  fighterDamage: 3
-  fighterAttackInterval: 3
-  fighterSpecialAttackInterval: 9
-  fighterMoveSpeed: 180
+  fighterHealth: 50
+  fighterDamage: 5
+  fighterAttackInterval: 5
+  fighterSpecialAttackInterval: 15
+  fighterMoveSpeed: 150
