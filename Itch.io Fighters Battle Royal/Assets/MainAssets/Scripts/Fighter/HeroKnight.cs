@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class WarriorV1_3 : MonoBehaviour, IFighterAttack
+public class HeroKnight : MonoBehaviour, IFighterAttack
 {
     [Header("Attack State")]
     [SerializeField] LayerMask fighterMask;
@@ -88,14 +88,14 @@ public class WarriorV1_3 : MonoBehaviour, IFighterAttack
 
     public void SpecialAttack()
     {
-            Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[0], fighterMask);
-            foreach (Collider2D hit in hits)
-            {
-                if (hit == null)
-                    continue;
+        Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[0], fighterMask);
+        foreach (Collider2D hit in hits)
+        {
+            if (hit == null)
+                continue;
 
-                hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
-            }
+            hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
+        }
     }
 }
 

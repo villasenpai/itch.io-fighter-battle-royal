@@ -89,6 +89,7 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
 
     public void SpecialAttack()
     {
+        print("hit " + (specialAttackCounter % 2));
         Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[specialAttackCounter % 2], fighterMask);
         foreach (Collider2D hit in hits)
         {
