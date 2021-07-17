@@ -2,9 +2,9 @@
 
 public interface IColliderGetter
 {
-    Collider2D SingleCollisionCheck(Transform checkingPoint, LayerMask mask);
+    Collider2D SingleCollisionCheck(Collider2D checkingBound, LayerMask mask);
 
-    Collider2D[] AllCollisionCheck(Transform checkingPoints, LayerMask mask);
+    Collider2D[] AllCollisionCheck(Collider2D checkingBound, LayerMask mask);
 }
 
 

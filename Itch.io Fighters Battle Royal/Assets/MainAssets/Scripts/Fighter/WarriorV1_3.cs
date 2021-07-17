@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MinotaurAttack : MonoBehaviour, IFighterAttack
+public class WarriorV1_3 : MonoBehaviour, IFighterAttack
 {
     [Header("Attack State")]
     [SerializeField] LayerMask fighterMask;
@@ -10,7 +10,6 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
     int damage;
     float attackTimer = 0;
     float specialAttackTimer = 0;
-    int specialAttackCounter = 1;
 
     FighterController fighterController;
     IColliderGetter collisionScanner;
@@ -89,15 +88,15 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
 
     public void SpecialAttack()
     {
-        Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[specialAttackCounter % 2], fighterMask);
-        foreach (Collider2D hit in hits)
-        {
-            if (hit == null)
-                continue;
+            GetComponent<IFighterRun>().Stop();
+            Collider2D[] hits = collisionScanner.AllCollisionCheck(attackPoints[1], fighterMask);
+            foreach (Collider2D hit in hits)
+            {
+                if (hit == null)
+                    continue;
 
-            hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
-        }
-        specialAttackCounter++;
+                hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
+            }
     }
 }
 
