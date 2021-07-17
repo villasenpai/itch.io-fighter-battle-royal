@@ -11,15 +11,15 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Minotaur
+  - WarriorV1.3
+  - Evil Wizard 2
+  - Old Guardian
+  - OGBomb
+  - Hero Knight
+  - Axe Demon
+  - Hashashin
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Environment
+    uniqueID: 749920327
+    locked: 0
+  - name: Fighter
+    uniqueID: 2508779131
     locked: 0
