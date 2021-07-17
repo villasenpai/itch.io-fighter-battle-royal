@@ -56,20 +56,4 @@ public class FighterController : MonoBehaviour
             fighterRun.Run();
     }
 
-    public void AnimationEvent()
-    {
-        switch (fighterState)
-        {
-            case FighterState.Attack:
-                fighterAttack.Attack();
-                break;
-            case FighterState.Special:
-                fighterAttack.SpecialAttack();
-                break;
-            case FighterState.Die:
-                Destroy(gameObject);
-                break;
-
-        }
-    }
 }

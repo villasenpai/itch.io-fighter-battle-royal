@@ -56,4 +56,9 @@ public class FighterHealth : MonoBehaviour, IFighterHealth
 
     }
 
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }
