@@ -46,11 +46,16 @@ public class FighterHealth : MonoBehaviour, IFighterHealth
 
     public void TakeDamage(int damage)
     {
+        if (health <= 0)
+            return;
+
         health -= damage;
         hpBar.UpdateHP(health / (float)maxHealth);
 
         if (health <= 0)
+        {
             fighterController.SwitchState(FighterController.FighterState.Die);
+        }
         else
             fighterController.SwitchState(FighterController.FighterState.Hurt);
 
