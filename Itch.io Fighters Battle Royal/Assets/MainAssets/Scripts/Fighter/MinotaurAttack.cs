@@ -4,7 +4,7 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
 {
     [Header("Attack State")]
     [SerializeField] LayerMask fighterMask;
-    [SerializeField] CircleCollider2D[] attackPoints;
+    [SerializeField] Transform[] attackPoints;
     float attackInterval;
     float specialAttackInterval;
     int damage;
@@ -80,7 +80,7 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
 
     public void Attack()
     {
-        Collider2D hit = collisionScanner.SingleCollisionCheck(attackPoints[0], fighterMask);
+       Collider2D hit = collisionScanner.SingleCollisionCheck(attackPoints[0], fighterMask);
         if (hit == null)
             return;
 
@@ -100,5 +100,6 @@ public class MinotaurAttack : MonoBehaviour, IFighterAttack
         specialAttackCounter++;
     }
 }
+
 
 
