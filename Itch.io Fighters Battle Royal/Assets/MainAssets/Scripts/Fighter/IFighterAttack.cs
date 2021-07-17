@@ -3,7 +3,8 @@
 
     float fighterAttackInterval { get; set; }
     float fighterSpecialAttackInterval { get; set; }
-    int fighterDamage { get; set; }
+    int fighterAttackDamage { get; set; }
+    int fighterSpecialAttackDamage { get; set; }
 
 
     void Timer();

@@ -63,6 +63,7 @@ public class FighterHealth : MonoBehaviour, IFighterHealth
 
     public void Die()
     {
+        FightManager.fightManager.UpdateFight();
         Destroy(gameObject);
     }
 

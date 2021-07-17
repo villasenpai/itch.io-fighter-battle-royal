@@ -32,7 +32,8 @@ public class FighterController : MonoBehaviour
     void Start()
     {
         fighterRun.fighterMoveSpeed = fighterStat.fighterMoveSpeed;
-        fighterAttack.fighterDamage = fighterStat.fighterDamage;
+        fighterAttack.fighterAttackDamage = fighterStat.fighterDamage;
+        fighterAttack.fighterSpecialAttackDamage = fighterStat.fighterSpecialDamage;
         fighterAttack.fighterAttackInterval = fighterStat.fighterAttackInterval;
         fighterAttack.fighterSpecialAttackInterval = fighterStat.fighterSpecialAttackInterval;
         GetComponent<IFighterHealth>().fighterHealth = fighterStat.fighterHealth;

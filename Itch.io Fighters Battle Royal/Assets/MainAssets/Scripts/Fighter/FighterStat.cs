@@ -7,7 +7,8 @@ public class FighterStat : ScriptableObject
 {
     public int fighterHealth;
     public int fighterDamage;
-    public int fighterAttackInterval;
-    public int fighterSpecialAttackInterval;
+    public int fighterSpecialDamage;
+    public float fighterAttackInterval;
+    public float fighterSpecialAttackInterval;
     public float fighterMoveSpeed;
 }

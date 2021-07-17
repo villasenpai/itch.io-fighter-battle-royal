@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
-  m_Name: AxeDemon
+  m_Name: Minotaur
   m_EditorClassIdentifier: 
-  fighterHealth: 60
-  fighterDamage: 5
-  fighterAttackInterval: 4
-  fighterSpecialAttackInterval: 10
-  fighterMoveSpeed: 80
+  fighterHealth: 120
+  fighterDamage: 14
+  fighterSpecialDamage: 10
+  fighterAttackInterval: 8.75
+  fighterSpecialAttackInterval: 21
+  fighterMoveSpeed: 120

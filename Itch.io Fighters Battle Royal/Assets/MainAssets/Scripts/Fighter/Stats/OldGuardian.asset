@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
   m_Name: OldGuardian
   m_EditorClassIdentifier: 
-  fighterHealth: 50
-  fighterDamage: 6
-  fighterAttackInterval: 6
-  fighterSpecialAttackInterval: 18
-  fighterMoveSpeed: 120
+  fighterHealth: 150
+  fighterDamage: 17
+  fighterSpecialDamage: 25
+  fighterAttackInterval: 8
+  fighterSpecialAttackInterval: 24
+  fighterMoveSpeed: 100

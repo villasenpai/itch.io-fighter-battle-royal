@@ -5,7 +5,7 @@ using UnityEngine;
 public class OG_Bomb : MonoBehaviour, IBullet
 {
     [SerializeField] float bombSpeed;
-    Collider2D collision;
+    [SerializeField] Collider2D collision;
     LayerMask mask;
     int damage;
 
@@ -68,7 +68,6 @@ public class OG_Bomb : MonoBehaviour, IBullet
     {
         Destroy(bombBody);
         GetComponent<Animator>().SetTrigger("Explode");
-        bombBody.velocity = Vector2.zero;
         Collider2D[] hits = collisionScanner.AllCollisionCheck(collision, fighterMask);
         foreach (Collider2D hit in hits)
         {

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfbce12cc9960b46bd6e20f33632e6c, type: 3}
   m_Name: WarriorV1.3
   m_EditorClassIdentifier: 
-  fighterHealth: 35
-  fighterDamage: 3
-  fighterAttackInterval: 3
-  fighterSpecialAttackInterval: 9
+  fighterHealth: 120
+  fighterDamage: 6
+  fighterSpecialDamage: 10
+  fighterAttackInterval: 3.3
+  fighterSpecialAttackInterval: 9.9
   fighterMoveSpeed: 200

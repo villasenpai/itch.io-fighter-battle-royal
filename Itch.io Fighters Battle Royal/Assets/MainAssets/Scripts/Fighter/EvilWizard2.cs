@@ -8,6 +8,7 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
     float attackInterval;
     float specialAttackInterval;
     int damage;
+    int specialDamage;
     float attackTimer = 0;
     float specialAttackTimer = 0;
 
@@ -37,7 +38,7 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
             specialAttackInterval = value;
         }
     }
-    public int fighterDamage
+    public int fighterAttackDamage
     {
         get
         {
@@ -46,6 +47,17 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
         set
         {
             damage = value;
+        }
+    }
+    public int fighterSpecialAttackDamage
+    {
+        get
+        {
+            return specialDamage;
+        }
+        set
+        {
+            specialDamage = value;
         }
     }
 
@@ -84,7 +96,7 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
         if (hit == null)
             return;
 
-        hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
+        hit.transform.GetComponent<IFighterHealth>().TakeDamage(fighterAttackDamage);
     }
 
     public void SpecialAttack()
@@ -95,7 +107,7 @@ public class EvilWizard2 : MonoBehaviour, IFighterAttack
             if (hit == null)
                 continue;
 
-            hit.transform.GetComponent<IFighterHealth>().TakeDamage(damage);
+            hit.transform.GetComponent<IFighterHealth>().TakeDamage(fighterSpecialAttackDamage);
         }
     }
 }
