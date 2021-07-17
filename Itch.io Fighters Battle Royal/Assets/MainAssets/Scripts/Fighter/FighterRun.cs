@@ -3,7 +3,7 @@
 public class FighterRun : MonoBehaviour, IFighterRun
 {
     [Header("Run State")]
-    [SerializeField] Transform wallScanPoint;
+    [SerializeField] CircleCollider2D wallScanPoint;
     [SerializeField] LayerMask wallMask;
     float movementSpeed;
     bool canRun = true;
